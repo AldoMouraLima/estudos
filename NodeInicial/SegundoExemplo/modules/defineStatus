@@ -1,0 +1,12 @@
+var status = function(m){
+var sit = "";
+    if (m >= 7){
+        sit = "Aproved";
+    } 
+    else{
+        sit = "Reproved";
+    }
+    return sit;  
+}
+
+module.exports = status;

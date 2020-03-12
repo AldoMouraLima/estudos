@@ -1,0 +1,13 @@
+var situacao = function(m){
+var sit = "";
+    if (m >= 7){
+        sit = "Aprovado";
+    } 
+    else{
+        sit = "Reprovado";
+    }
+    return sit;  
+}
+
+
+module.exports = situacao;

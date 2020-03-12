@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+	    var semana = ["Domingo", "Segunda-Feira", "Terça-Feira",
+                      "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+
+		function diaSemana(){
+  		    var dia = new Date().getDay();
+		    mensagem = 'Hoje é ' + semana[dia]; // A atribuição caractariza mensagem com global  
+  		}
+		diaSemana();
+	    alert(mensagem); // Exibe o dia da semana porque mensagem é uma variável global
+
+	</script>
+	
+</body>
+</html>

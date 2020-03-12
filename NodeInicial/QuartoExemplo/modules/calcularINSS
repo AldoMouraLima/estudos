@@ -1,0 +1,23 @@
+var valueINSS = function (sal){
+    var value=0;
+    const faixa1 = .8;
+    const faixa2 = .12;
+    const faixa3 = .15;
+    const salLimite = 7000;
+
+    if (sal <= 3000) {
+        value = sal * faixa1;
+    }
+    else if(sal <= 5000) {
+        value = sal * faixa2;
+    }
+    else if(sal <= 7000) {
+        value = sal * faixa3;
+    }
+    else {
+        value = salLimite * faixa3;
+    }
+    return value;
+}
+
+module.exports = valueINSS;
