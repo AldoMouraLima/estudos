@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Farmácia - Promoção na 2ª unidade</title>
+</head>
+<body>
+	<header><h2>Farmácia</h2></header>
+	<input type="text" id="inDescricao" placeholder="Descrição do medicamento">
+	<input type="text" id="inPreco" placeholder="Preço do medicamento">
+	<input type="button" value="Exibir Promoção" id="btExibir">
+	<p id="prPromocaoDescricao"></p>
+	<p id="prPromocaoPreco"></p>
+	<script>
+		function mostraPromocao() {
+			var inDescricao = document.getElementById('inDescricao').value;
+			var inPreco     = parseFloat(document.getElementById('inPreco').value);
+			var valorPromocao = Math.trunc(inPreco * 2);
+			document.getElementById("prPromocaoDescricao").textContent = "Promoção de " + inDescricao;
+			document.getElementById("prPromocaoPreco").textContent = "Leve 2 por R$ " + valorPromocao.toFixed(2);
+		}
+		var btExibir = document.getElementById("btExibir");
+		btExibir.addEventListener("click",mostraPromocao);
+	</script>
+</body>
+</html>

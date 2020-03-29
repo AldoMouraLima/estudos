@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Duração de viagem em horas</title>
+</head>
+<body>
+	<header><h2>Setor: Transporte</h2></header>
+	<input type="text" id="inDias"  placeholder="Dias da viagem">
+	<input type="text" id="inHoras" placeholder="Horas da viagem">
+	<input type="button" value="Exibir Duração" id="btExibir">
+	<p id="prDuracaoHoras"></p>
+	<script>
+		function mostraDuracaoHoras() {
+			var inDias = parseInt(document.getElementById('inDias').value);
+			var inHoras= parseInt(document.getElementById('inHoras').value);
+			var duracaoHoras = inDias * 24 + inHoras;
+			document.getElementById("prDuracaoHoras").textContent = "Total de horas " + duracaoHoras.toFixed(2);
+		}
+		var btExibir = document.getElementById("btExibir");
+		btExibir.addEventListener("click",mostraDuracaoHoras);
+	</script>
+</body>
+</html>

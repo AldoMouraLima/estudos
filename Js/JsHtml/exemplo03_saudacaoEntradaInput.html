@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Saudação com Entrada</title>
+</head>
+<body>
+	<header><h2>Saudação</h2></header>
+	<input type="text" id="inNome" placeholder="Digite seu nome">
+	<input type="button" value="Exibir Saudação" id="btExibir">
+	<p id="prSaudacao"></p>
+	<script>
+		function mostraSaudacao() {
+			var inNome = document.getElementById('inNome').value;
+			document.getElementById("prSaudacao").textContent = "Olá, " + inNome + "!!!";
+		}
+		var btExibir = document.getElementById("btExibir");
+		btExibir.addEventListener("click",mostraSaudacao);
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Pizzaria - Conta</title>
+</head>
+<body>
+	<script>
+		var valorConta  = parseFloat(prompt("Valor da conta:"));
+		var qtdePessoas = parseInt(prompt("Quantidade de pessoas:"));
+		var valorPorPessoa = valorConta / qtdePessoas;
+        document.write("<p>Para uma conta de R$ "+ valorConta.toFixed(2) + "</p>");
+        document.write("<p>rateada entre " + qtdePessoas + " pessoas</p>");
+        document.write("<p>cada uma pagará R$ "+ valorPorPessoa.toFixed(2) + "</p>");		
+	</script>
+</body>
+</html>

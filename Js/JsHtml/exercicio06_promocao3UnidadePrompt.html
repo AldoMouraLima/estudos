@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Supermercado - Promoção na 3ª unidade</title>
+</head>
+<body>
+	<header><h2>Supermercado</h2></header>
+	<input type="text" id="inDescricao" placeholder="Descrição do medicamento">
+	<input type="text" id="inPreco" placeholder="Preço do medicamento">
+	<input type="button" value="Exibir Promoção" id="btExibir">
+	<p id="prPromocaoDescricao"></p>
+	<p id="prPromocaoPreco"></p>
+	<script>
+		function mostraPromocao() {
+			var inDescricao = document.getElementById('inDescricao').value;
+			var inPreco     = parseFloat(document.getElementById('inPreco').value);
+			var valor3Produto = inPreco * 0.5;
+			var valorPromocao = inPreco * 2 + valor3Produto;
+			document.getElementById("prPromocaoDescricao").textContent = inDescricao + " - Promoção: leve 3 por " + valorPromocao.toFixed(2) ;
+			document.getElementById("prPromocaoPreco").textContent = "O 3º produto custa apenas R$ " + valor3Produto.toFixed(2);
+		}
+		var btExibir = document.getElementById("btExibir");
+		btExibir.addEventListener("click",mostraPromocao);
+	</script>
+</body>
+</html>
