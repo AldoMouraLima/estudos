@@ -1,0 +1,6 @@
+db.teste.insert( {
+                  name: "Antonio Carlos",
+                  celular: "99999-8888",
+                  email: "antonio.carlos@gmail.com"
+                  }
+                )

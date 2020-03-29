@@ -1,0 +1,66 @@
+cmder
+
+
+nvm windows
+Gerenciador de versão do node
+
+para atualizar a versao do node: npm i -g npm
+
+
+UdgWebDev.com tuturial para instalação do node
+
+
+1ª Intervenção Node
+
+Arquitetura cliente x Servidor
+
+A web funciona seguindo a arquitetura Cx S
+onde o cliente fazem requisições de acordo com um protocolo a um determinado servidor ...
+
+DNS
+HTTP, HTTPS, FTP
+
+Metodos HTTP
+9 metodos
+
+
+2 intervenção
+Falou de rest
+api
+rota
+get("/usuarios",controller)
+
+
+Para inserir usuarios
+controllerUsuarios.js
+- importações
+- escrever as junções
+- exportar (para tornar visível)
+
+
+orm (object relational mapper)
+https://www.devmedia.com.br/orm-object-relational-mapper/19056
+
+
+tutorial node
+https://www.codementor.io/@olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd
+
+
+estudo node
+https://www.devmedia.com.br/nodejs/
+https://www.opus-software.com.br/node-js/
+
+
+
+linha de comando = cli Interface line of command
+
+
+
+
+deno vs node
+
+
+ 
+
+
+
