@@ -48,6 +48,9 @@ public class Q1_VencedorEleicao {
 			if (votosCand2>votosCand1 && votosCand2>votosCand3) {
 				nomeVencedor = nomeCand2;				
 			}
+			else  {
+				nomeVencedor = nomeCand3;								
+			}
 		}		
 		System.out.printf("\nO candidato vencedor é " + nomeVencedor);
 		
