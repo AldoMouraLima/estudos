@@ -1,0 +1,25 @@
+<!DOCTYPE Html>
+<html lang= "pt-br"> 
+<head >
+    <meta charset="UTF-8"/>
+    <title >Teste da primeira atividade</title>
+</head>
+<body>
+    <header> <h1 >"Ola! descreva sua compra, por favor"</h1> </header>
+    <input type="text" id="produto" placeholder="Qual o seu produto ?">
+    <input type="number" id="valor" placeholder="preço do produto">
+    <input type="button" value="mostrar valor" id="mostrar">
+    <p id="resultado"></p>
+    <script>
+       function MostrarValor(){
+       		var produto = document. getElementById("produto").value;
+ 			var valor = document.getElementById("valor").value;
+document.getElementById("resultado").textcontent = "promoção do" + produto + "compre 2 pague" + valor.matchfloor*2
+ 
+
+}
+ var mostrar = document.getElementById("mostrar");
+mostrar.addeventlister("click",MostrarValor)
+    </script>
+    </body>
+    </html>

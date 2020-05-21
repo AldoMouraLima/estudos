@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang ="pt-br">
+<head>
+  <meta charset="UTF-8"/>
+  <title> Atividade 3 - INTEGRAÇÃO  com HTML </title>
+</head>
+<body>
+  <header><h2> Pagamento</h2></header><hr>
+    <label> Data do Boleto :</label>
+  <input type="date" id="num" />
+  <label>Dias de atraso :</label>
+  <input type="text" id="ven" />
+  <label>Valor do documento R$:</label>
+  <input type="text" id="promo" name="">
+  <input type="button" value="Mostar valor" id="exibir" />
+    <h3 id="outJuros"></h3>
+    <h3 id="medi"></h3> 
+  
+  <script>
+    function exibirResultado () {
+      
+      var num = Number(document.getElementById("num").value;
+      var ven = Number(document.getElementById("ven").value;
+      var promo = Number(document.getElementById("promo").value;
+      var medi = document.getElementById("medi");
+      var outJuros = document.getElementById("outJuros")
+      
+      //var  num1 = Number(num.value) ;
+      //var ven = Number(ven.value);
+      //var promo = Number(promo.value);
+      var total ; 
+      var inJuros;
+
+      if (  ven > 0 && ven <= 30 ) {
+               var inJuros = (promo * 0.05) 
+               var total = inJuros + promo
+               document.getElementById("outJuros").textContent= "Valor dos Juros R$ " + inJuros.toFixed(2);
+               document.getElementById("medi").textContent= "O valor total R$ : " + total.toFixed(2);
+      }else if(ven > 30 && ven <= 60 ){
+        var inJuros = (promo * 0.1 )
+        var total = inJuros + promo
+        document.getElementById("outJuros").textContent = " Valor dos juros R$ :" + inJuros.toFixed(2);
+        document.getElementById("medi").textContent = " O valor total R$ " + total.toFixed(2);
+      } if (ven > 60) {
+        var inJuros = (promo * 0.15) 
+        var total = inJuros + promo
+        document.getElementById("outJuros").textContent= " Valor dos juros R$ :" + inJuros.toFixed(2);
+        document.getElementById("medi").textContent = "O valor total R$ :" + total.toFixed(2);
+      }
+  
+      
+    }
+    
+    var exibir = document.getElementById("exibir");
+    exibir.addEventListener("click", exibirResultado);
+  
+
+  </script>
+        
+
+</body>
+</html>

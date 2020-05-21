@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Escola de Natação - Nado a Jato</title>
+</head>
+
+<body>
+	<header><h2>Cálculo de Parcela Paga em Atraso</h2></header><hr/>
+	<label>Tempo (dias)</label>
+	<input type="number" placeholder="0" step="0" min="1" max="60" id="dias"> 
+	<p>Informe o valor da parcela</p>
+	<p><input type="text" id="valor"/></p>
+	<p><input type="button" value="Exibir valor com juros" id="btResultado"></p>
+    <p id="valorTotal"></p>
+
+
+    <script>
+        function calcularValor(){
+        	var varDias = parseInt(document.getElementById('dias').value);
+        	var varValor = parseInt(document.getElementById('valor').value);
+ 
+     		console.log(varDias);
+     		console.log(varValor);
+        	
+				    if (varDias<=30){
+				    	const x = 0.05;
+                        var a = varValor*(x*varDias);
+                        document.getElementById("valorTotal").textContent="Valor com juros"+ a.toFixed(2);			
+					}
+					else if (varDias <=60){
+						const y = 0.10;
+                        var b = varValor*(y*varDias);
+                        document.getElementById("valorTotal").textContent="Valor com juros"+ b.toFixed(2);
+					}
+					else if (varDias>60){
+						const z = 0.15;
+						 var c = varValor*(z*varDias);
+						 document.getElementById("valorTotal").textContent="Valor com juros"+ c.toFixed(2);
+
+					}
+                 
+				}
+		var resultado = document.getElementById("btResultado");
+        resultado.addEventListener("click", calcularValor);
+
+    </script>
+</body>
+</html>
